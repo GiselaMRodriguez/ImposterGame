@@ -21,20 +21,20 @@ function imposterGame(playerCount = 6) {
     const randomWord = "boat";
     for (let player = 1; player <= playerCount; player++) {
         if (player === imposter) {
-            console.log("Imposter");
+            alert("Imposter");
         } else {
-            console.log(randomWord);
+            alert(randomWord);
         }
-        console.log("Next button");
+        alert("Next");
     }
 }
 
 
 const submitButton = document.getElementById("submitButton");
-console.log(submitButton);
+//console.log(submitButton);
 
 const numberOfPlayersInput = document.getElementById("numberOfPlayersInput");
-console.log(numberOfPlayersInput);
+//console.log(numberOfPlayersInput);
 
 submitButton.addEventListener('click', startGame);
 
