@@ -15,16 +15,19 @@
 function getRandomInt(max) {
     return Math.floor(Math.random() * max) + 1;
 }
+const getPlayerCount = 6;
 
-
-const playerCount = 6;
-const imposter = getRandomInt(playerCount);
-const randomWord = "boat";
-for (let player = 1; player <= playerCount; player++) {
-    if (player === imposter) {
-        console.log("Imposter");
-    } else {
-        console.log(randomWord);
+function imposterGame(playerCount) {
+    const imposter = getRandomInt(playerCount);
+    const randomWord = "boat";
+    for (let player = 1; player <= playerCount; player++) {
+        if (player === imposter) {
+            console.log("Imposter");
+        } else {
+            console.log(randomWord);
+        }
+        console.log("Next button");
     }
-    console.log("Next button");
 }
+
+imposterGame(getPlayerCount);
