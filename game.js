@@ -36,10 +36,10 @@ console.log(submitButton);
 const numberOfPlayersInput = document.getElementById("numberOfPlayersInput");
 console.log(numberOfPlayersInput);
 
-submitButton.addEventListener('click', (clickEvent) => {
+submitButton.addEventListener('click', startGame);
+
+function startGame(clickEvent) {
     clickEvent.preventDefault();
-    console.log(clickEvent);
-    console.log(numberOfPlayersInput.value);
     imposterGame(numberOfPlayersInput.value);
-});
+}
 
